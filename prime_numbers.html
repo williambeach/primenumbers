@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function scope example</title>
+</head>
+<body>
+
+  <script>
+
+    userInput = prompt("Please enter a number greater than 1..");
+    
+    while (userInput !== null && userInput !== "") {
+      if (isNaN(userInput) || userInput <= 1) {
+        userInput = Number(prompt('Please enter a valid number greater than 1...or esc/enter to end'));
+      } 
+      if (userInput > 1) {
+        count = 0;
+        for (let i = 2; i <= userInput; i++ ) {
+          for (let j = 1; j <= i; j++) {
+            if (i % j == 0) {
+              count += 1
+            }
+          } if (count <= 2) {
+            console.log(i);
+            } count = 0;
+        }
+        break;
+      }
+     
+      if (userInput == null || userInput == "") {
+        alert('goodbye');
+        break;
+      }
+    }
+      
+    
+     
+    
+    
+    
+        
+    
+  </script>
+</body>
+</html>
